@@ -1,14 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="30dp">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="8dp"
+        android:clipToPadding="false" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Productos"
-        android:textSize="20sp" />
+        android:layout_gravity="center"
+        android:visibility="gone" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="No hay productos aún"
+        android:textColor="?android:attr/textColorSecondary"
+        android:visibility="gone" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="110dp"
+        android:layout_marginEnd="24dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+</FrameLayout>

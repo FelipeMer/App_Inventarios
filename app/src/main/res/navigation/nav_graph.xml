@@ -29,7 +29,11 @@
         android:id="@+id/productListFragment"
         android:name="com.codebyfelipe.appinventarios.ui.catalog.product.ProductListFragment"
         android:label="Catálogo"
-        tools:layout="@layout/fragment_product_list" />
+        tools:layout="@layout/fragment_product_list">
+        <action
+            android:id="@+id/action_productListFragment_to_productFormFragment"
+            app:destination="@id/productFormFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/movementsMenuFragment"
@@ -42,5 +46,35 @@
         android:name="com.codebyfelipe.appinventarios.ui.profile.ProfileFragment"
         android:label="Perfil"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/productFormFragment"
+        android:name="com.codebyfelipe.appinventarios.ui.catalog.product.ProductFormFragment"
+        android:label="Producto"
+        tools:layout="@layout/fragment_product_form">
+
+        <argument
+            android:name="productoId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+
+        <action
+            android:id="@+id/action_productFormFragment_to_barcodeScannerFragment"
+            app:destination="@id/barcodeScannerFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/barcodeScannerFragment"
+        android:name="com.codebyfelipe.appinventarios.ui.scanner.BarcodeScannerFragment"
+        android:label="Escanear"
+        tools:layout="@layout/fragment_barcode_scanner" />
+
+    <action
+        android:id="@+id/action_global_to_loginFragment"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/nav_graph"
+        app:popUpToInclusive="true" />
 
 </navigation>
