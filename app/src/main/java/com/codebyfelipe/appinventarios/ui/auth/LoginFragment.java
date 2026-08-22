@@ -13,7 +13,7 @@ import com.codebyfelipe.appinventarios.R;
 import com.codebyfelipe.appinventarios.databinding.FragmentLoginBinding;
 import com.codebyfelipe.appinventarios.util.Resource;
 
-public class LoginFragment extends Fragment {
+public class LoginFragment extends Fragment { //Observa el ViewModel, muestra si está cargando o si hay algún error, navega al Home si el login es exitoso. Si ya hay sesión activa, salta el login.
 
     private FragmentLoginBinding binding;
     private LoginViewModel viewModel;

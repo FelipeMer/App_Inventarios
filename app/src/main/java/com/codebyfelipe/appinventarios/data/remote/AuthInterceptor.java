@@ -8,7 +8,7 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class AuthInterceptor implements Interceptor {
+public class AuthInterceptor implements Interceptor {  //función que agrega automáticamente a cada request el header del bearer token
 
     private final SessionManager sessionManager;
 
@@ -28,7 +28,7 @@ public class AuthInterceptor implements Interceptor {
         }
 
         Request newRequest = originalRequest.newBuilder()
-                .header("Authorization", "Bearer " + token)
+                .header("Authorization", "Bearer " + token) //Acá agrega el header para cada consulta
                 .build();
 
         return chain.proceed(newRequest);

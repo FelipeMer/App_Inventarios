@@ -20,7 +20,7 @@ import com.codebyfelipe.appinventarios.util.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductFormFragment extends Fragment {
+public class ProductFormFragment extends Fragment {  //Formulario de crear/editar. Usa productoId (argumento de navegación) para decidir si es edición.
 
     public static final String ARG_PRODUCTO_ID = "productoId";
     private static final String REQUEST_KEY_BARCODE = "barcode_result";

@@ -19,7 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class CatalogRepository {
+public class CatalogRepository {  //Clase para el manejo de los productos si hay internet, pide al backend y actualiza Room en segundo plano, si no hay internet o falla la red, lee directamente de Room como respaldo.
 
     private final ApiService apiService;
     private final ProductoDao productoDao;
@@ -61,7 +61,7 @@ public class CatalogRepository {
 
             @Override
             public void onFailure(Call<List<Producto>> call, Throwable t) {
-                // Falló la conexión a mitad de camino -> intenta caché como respaldo
+                // Falló la conexión a mitad de camino entonces intenta caché como respaldo
                 cargarDesdeCache(result, "Error de conexión — mostrando datos guardados");
             }
         });
@@ -79,7 +79,7 @@ public class CatalogRepository {
         });
     }
 
-    // ---------- Mapeo Entity <-> DTO ----------
+    // funciones que convierten entre el DTO de la API y el dto de la bd local
 
     private List<ProductoEntity> mapToEntities(List<Producto> productos) {
         List<ProductoEntity> entities = new ArrayList<>();

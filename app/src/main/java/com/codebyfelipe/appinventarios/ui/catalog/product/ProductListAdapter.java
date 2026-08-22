@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.ProductViewHolder> {
+    //Traduce la lista de Producto a filas visuales.
 
     public interface OnProductClickListener {
         void onProductClick(Producto producto);

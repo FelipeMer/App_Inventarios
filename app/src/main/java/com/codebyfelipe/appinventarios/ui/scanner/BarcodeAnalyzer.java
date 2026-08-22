@@ -11,7 +11,7 @@ import com.google.mlkit.vision.barcode.common.Barcode;
 import com.google.mlkit.vision.common.InputImage;
 import java.util.List;
 
-public class BarcodeAnalyzer implements ImageAnalysis.Analyzer {
+public class BarcodeAnalyzer implements ImageAnalysis.Analyzer { //Analiza cada fotograma de la cámara con ML Kit y detecta patrones de código de barras.
 
     public interface OnBarcodeDetected {
         void onDetected(String value);

@@ -8,7 +8,7 @@ import com.codebyfelipe.appinventarios.data.remote.dto.LoginResponse;
 import com.codebyfelipe.appinventarios.data.repository.AuthRepository;
 import com.codebyfelipe.appinventarios.util.Resource;
 
-public class LoginViewModel extends AndroidViewModel {
+public class LoginViewModel extends AndroidViewModel { //Clase que valida campos y llama a AuthRepository para validar si la respuesta de inicio de sesión es exitosa
 
     private final AuthRepository authRepository;
     private final MutableLiveData<Resource<LoginResponse>> loginResult = new MutableLiveData<>();

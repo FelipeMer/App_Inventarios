@@ -14,7 +14,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class AuthRepository {
+public class AuthRepository { //Llama al endpoint de login del back, si es exitoso guarda el access token y los datos del usuario
 
     private final ApiService apiService;
     private final SessionManager sessionManager;
@@ -33,8 +33,7 @@ public class AuthRepository {
                 if (response.isSuccessful() && response.body() != null) {
                     LoginResponse body = response.body();
 
-                    // Guarda el token y los datos del usuario para reutilizarlos
-                    // en cada request futura (vía AuthInterceptor)
+                    // Guarda el token y los datos del usuario para reutilizarlos en cada request usando AuthInterceptor
                     sessionManager.saveToken(body.getAccess_token());
                     sessionManager.saveUser(
                             body.getUsuario().getId_usuario(),
@@ -53,6 +52,9 @@ public class AuthRepository {
             }
         });
     }
+
+
+    //Para implementar en futuras implementaciones un registro de usuarios.
 
     public void register(String nombre, String email, String password, MutableLiveData<Resource<Usuario>> result) {
         result.setValue(Resource.loading());

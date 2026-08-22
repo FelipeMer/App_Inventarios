@@ -7,7 +7,7 @@ import androidx.security.crypto.MasterKey;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 
-public class SessionManager {
+public class SessionManager { //función que guarda y lee el JWT de fomr acifrada
 
     private final SharedPreferences prefs;
 

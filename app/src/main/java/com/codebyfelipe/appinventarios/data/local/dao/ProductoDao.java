@@ -9,7 +9,7 @@ import com.codebyfelipe.appinventarios.data.local.entity.ProductoEntity;
 import java.util.List;
 
 @Dao
-public interface ProductoDao {
+public interface ProductoDao {  //Clase con los métodos para escribir o modificar los datos de Productos en la bd local SQLite
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(List<ProductoEntity> productos);

@@ -22,7 +22,7 @@ import com.google.common.util.concurrent.ListenableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class BarcodeScannerFragment extends Fragment {
+public class BarcodeScannerFragment extends Fragment { //Configura CameraX, pide permiso de cámara, y devuelve el código detectado al formulario.
 
     private static final String REQUEST_KEY_BARCODE = "barcode_result";
 

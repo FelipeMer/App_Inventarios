@@ -5,7 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "productos")
-public class ProductoEntity {
+public class ProductoEntity { //Clase que representa la tabla de SQLite local
 
     @PrimaryKey
     @NonNull

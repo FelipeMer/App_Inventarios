@@ -13,7 +13,7 @@ import com.codebyfelipe.appinventarios.R;
 import com.codebyfelipe.appinventarios.databinding.FragmentProfileBinding;
 import com.codebyfelipe.appinventarios.util.SessionManager;
 
-public class ProfileFragment extends Fragment {
+public class ProfileFragment extends Fragment { //Muestra el usuario actual y el botón de cerrar sesión.
 
     private FragmentProfileBinding binding;
     private SessionManager sessionManager;

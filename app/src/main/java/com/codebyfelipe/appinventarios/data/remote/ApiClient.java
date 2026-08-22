@@ -8,7 +8,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ApiClient {
+public class ApiClient {  //Construye una sola vez la instancia de retrofit con el authInterceptor
 
     private static Retrofit retrofit;
 

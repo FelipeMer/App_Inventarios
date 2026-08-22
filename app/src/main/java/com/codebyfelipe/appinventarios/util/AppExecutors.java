@@ -9,7 +9,7 @@ public class AppExecutors {
     private final ExecutorService diskIO;
 
     private AppExecutors() {
-        diskIO = Executors.newSingleThreadExecutor();
+        diskIO = Executors.newSingleThreadExecutor(); //Se crea un nuevo hilo dedicado para las operaciones de Room, para no tocar la base de datos desde el hilo principal
     }
 
     public static synchronized AppExecutors getInstance() {

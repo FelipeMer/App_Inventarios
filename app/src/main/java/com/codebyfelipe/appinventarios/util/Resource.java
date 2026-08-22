@@ -1,6 +1,6 @@
 package com.codebyfelipe.appinventarios.util;
 
-public class Resource<T> {
+public class Resource<T> { //función que separa cualquier respuesta en 3 categorias para que UI sepa que debe mostrar
 
     public enum Status { LOADING, SUCCESS, ERROR }
 

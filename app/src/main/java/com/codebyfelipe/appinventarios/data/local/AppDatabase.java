@@ -8,7 +8,7 @@ import com.codebyfelipe.appinventarios.data.local.dao.ProductoDao;
 import com.codebyfelipe.appinventarios.data.local.entity.ProductoEntity;
 
 @Database(entities = {ProductoEntity.class}, version = 1, exportSchema = false)
-public abstract class AppDatabase extends RoomDatabase {
+public abstract class AppDatabase extends RoomDatabase {  //clase que define la base de datos
 
     public abstract ProductoDao productoDao();
 

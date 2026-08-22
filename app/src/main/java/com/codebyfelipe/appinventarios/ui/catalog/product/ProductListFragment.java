@@ -16,7 +16,7 @@ import com.codebyfelipe.appinventarios.data.remote.dto.Producto;
 import com.codebyfelipe.appinventarios.databinding.FragmentProductListBinding;
 import com.codebyfelipe.appinventarios.util.Resource;
 
-public class ProductListFragment extends Fragment {
+public class ProductListFragment extends Fragment { //Muestra el RecyclerView de productos, tiene la opción para crear uno nuevo.
 
     private FragmentProductListBinding binding;
     private ProductViewModel viewModel;

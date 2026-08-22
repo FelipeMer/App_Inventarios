@@ -11,7 +11,7 @@ import com.codebyfelipe.appinventarios.data.repository.CatalogRepository;
 import com.codebyfelipe.appinventarios.util.Resource;
 import java.util.List;
 
-public class ProductViewModel extends AndroidViewModel {
+public class ProductViewModel extends AndroidViewModel { //Expone productos, detalle de un producto, categorías, y el resultado de guardar
 
     private final CatalogRepository catalogRepository;
     private final MutableLiveData<Resource<List<Producto>>> productos = new MutableLiveData<>();
