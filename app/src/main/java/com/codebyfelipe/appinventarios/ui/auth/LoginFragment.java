@@ -32,7 +32,7 @@ public class LoginFragment extends Fragment {
 
         viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
 
-        // Si ya hay una sesión activa, salta directo al Home sin pasar por Login
+        // Si ya hay una sesión activa, salta directo al inicio sin pasar por Login
         if (viewModel.isLoggedIn()) {
             navigateToHome();
             return;
