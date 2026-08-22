@@ -3,7 +3,7 @@ package com.codebyfelipe.appinventarios.util;
 public class Constants {
 
     //Enlace del BackEnd
-    public static final String BASE_URL = "http://192.168.101.70:3000/";
+    public static final String BASE_URL = "https://server-app-inventario.codebyfelipe.com/";
 
     //Nombre del arvhivo de Shared Preferences Cifradas
     public static final String PREFS_NAME = "inventario_secure_prefs";
